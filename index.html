@@ -404,14 +404,14 @@
             const resetBtn = document.getElementById('resetBtn');
             
             // 从本地存储获取计数或初始化为0
-            let count = parseInt(localStorage.getItem('prayerCount-jlpsj')) || 0;
+            let count = parseInt(localStorage.getItem('prayerCount-fyw')) || 0;
             countDisplay.textContent = count;
             
             // 增加计数
             countBtn.addEventListener('click', function() {
                 count++;
                 countDisplay.textContent = count;
-                localStorage.setItem('prayerCount-jlpsj', count);
+                localStorage.setItem('prayerCount-fyw', count);
                 
                 // 添加视觉反馈
                 const counterSpan = countDisplay.querySelector('span');
@@ -428,7 +428,7 @@
                 if (confirm('确定要重置念诵计数吗？')) {
                     count = 0;
                     countDisplay.textContent = count;
-                    localStorage.setItem('prayerCount-jlpsj', count);
+                    localStorage.setItem('prayerCount-fyw', count);
                     
                     // 添加视觉反馈
                     const counterSpan = countDisplay.querySelector('span');
@@ -459,5 +459,6 @@
         });
     </script>
 </body>
+
 
 </html>
